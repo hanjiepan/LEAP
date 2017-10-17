@@ -1,0 +1,13 @@
+*.swp
+.idea/*
+*.log
+__pycache__/*
+*.pyc
+data/*.npz
+data/ast_src_resolve/*.npz
+result/*.npz
+result/ast_src_resolve/*.npz
+result/*.pdf
+result/ast_src_resolve/*.pdf
+result/*.png
+
