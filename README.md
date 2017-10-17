@@ -75,10 +75,10 @@ Fig. 8: Model order selection base on the fitting error to avoid false detection
     
 Fig. 9: Point source reconstruction with LOFAR measurements from the Böotes field:
 
-    # 1) Single-band case (i.e., Dataset II), then specify input data file as
+    # 1) Single-band case (i.e., Dataset II)
     python bootes_field_narrow_fov_experiment.py
     
-    # 2) Multi-band case (i.e., Dataset III), then specify input data file as
+    # 2) Multi-band case (i.e., Dataset III)
     python bootes_field_narrow_fov_experiment.py -m
     
 Fig. 10: Point source reconstruction in the presence of extended sources with LOFAR measurement from the Toothbrush cluster:
@@ -189,4 +189,4 @@ License
 -------
 
 Copyright (c) 2017, Hanjie Pan<br>
-The source code is released under the [Apache](http://www.apache.org/licenses/LICENSE-2.0) license.
+The source code is released under the [Apache](LICENSE.txt) license.
