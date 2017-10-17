@@ -116,14 +116,14 @@ The extracted visibility measurements from the MS file of LOFAR observation are 
 Dependencies
 ------------
 
-* A working distribution of [Python 3.5](https://www.python.org/downloads/) and [Python 2.7](https://www.python.org/downloads/) (since we use [casacore](https://github.com/casacore/casacore), which only have official support for Python 2).
-* [casacore](https://github.com/casacore/casacore) for the data extraction from MS file and its Python wrapper [python-casacore](https://github.com/casacore/python-casacore).
+* A working distribution of [Python 3.5](https://www.python.org/downloads/) and [Python 2.7](https://www.python.org/downloads/) (A few scripts run CLEAN for comparision. [casacore](https://github.com/casacore/casacore), which only have official support for Python 2, is used to exchange data between a measurement set (MS) and numpy arrays).
 * [Numpy](http://www.numpy.org/), [Scipy](http://www.scipy.org/).
 * We use the distribution [anaconda](https://store.continuum.io/cshop/anaconda/) to simplify the setup of the environment.
 * We use the [MKL](https://store.continuum.io/cshop/mkl-optimizations/) extension of Anaconda to speed things up. There is a [free license](https://store.continuum.io/cshop/academicanaconda) for academics.
 * We use joblib for parallel computations.
 * [matplotlib](http://matplotlib.org) for plotting the results.
 * [theano](http://deeplearning.net/software/theano/) for the parallel computation with GPU.
+* [casacore](https://github.com/casacore/casacore) for the data exhcange to / from MS file and its Python wrapper [python-casacore](https://github.com/casacore/python-casacore).
 
 List of standard packages needed
 
@@ -133,7 +133,7 @@ The easiest way to setup proper computing environment is first to download and i
 
     conda install python=3.5 mkl=11.3.3 theano joblib
 
-The CLEAN algorithm we have used is [wsclean](https://sourceforge.net/projects/wsclean/).
+The CLEAN algorithm [wsclean](https://sourceforge.net/projects/wsclean/) is used for comparisons.
 
 System Tested
 -------------
