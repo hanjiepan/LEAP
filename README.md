@@ -118,8 +118,8 @@ Dependencies
 
 * A working distribution of [Python 3.5](https://www.python.org/downloads/) and [Python 2.7](https://www.python.org/downloads/) (A few scripts run CLEAN for comparision. [casacore](https://github.com/casacore/casacore), which only have official support for Python 2, is used to exchange data between a measurement set (MS) and numpy arrays).
 * [Numpy](http://www.numpy.org/), [Scipy](http://www.scipy.org/).
-* We use the distribution [anaconda](https://store.continuum.io/cshop/anaconda/) to simplify the setup of the environment.
-* We use the [MKL](https://store.continuum.io/cshop/mkl-optimizations/) extension of Anaconda to speed things up. There is a [free license](https://store.continuum.io/cshop/academicanaconda) for academics.
+* We use the distribution [Anaconda](https://www.anaconda.com/download/) to simplify the setup of the environment.
+* We use the [MKL](https://store.continuum.io/cshop/mkl-optimizations/) extension of Anaconda to speed things up.
 * We use joblib for parallel computations.
 * [matplotlib](http://matplotlib.org) for plotting the results.
 * [theano](http://deeplearning.net/software/theano/) for the parallel computation with GPU.
@@ -189,4 +189,4 @@ License
 -------
 
 Copyright (c) 2017, Hanjie Pan<br>
-The source code is released under the [Apache](LICENSE.txt) license.
+The source code is released under the [GPL](LICENSE.txt) license.
