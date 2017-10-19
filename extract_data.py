@@ -49,6 +49,9 @@ def parseArgs():
         Example usage:
         # Since in the BOOTES ms file station 12, 13, 16 and 17 are not working, 
         # we use 4 more remote stations
+        # DATA column in the MS file contains the residue visibilities after removing 
+        # the strong sources (in the calibration process). We need to add back the visibilities
+        # of these strong sources (unit mJy), which are stored in DATA_SIMULATED
         # for BOOTES field (single band)
         python2 extract_data.py \
             --basefile_name 'BOOTES24_SB180-189.2ch8s_SIM' \
@@ -97,8 +100,6 @@ def parseArgs():
     parser.add_argument('--basefile_name', type=str, required=False,
                         default='BOOTES24_SB180-189.2ch8s_SIM',
                         help='MS file name')
-    parser.add_argument('--blueBild_imag_file', type=str, required=False,
-                        default=None, help='BlueBild image file')
     parser.add_argument('--catalog_file', type=str, required=False,
                         default=None, help='Catalog *.npz file')
     parser.add_argument('--nvss_catalog_file', type=str, required=False,
@@ -129,9 +130,6 @@ def parseArgs():
                         help='If present, then the data is trimmed (due to failed stations)')
 
     args = vars(parser.parse_args())
-    if args['blueBild_imag_file'] == 'None':
-        args['blueBild_imag_file'] = None
-
     if args['catalog_file'] == 'None':
         args['catalog_file'] = None
 
@@ -277,7 +275,7 @@ if __name__ == '__main__':
                                   fig_file_format=fig_file_format, dpi=dpi)
 
     '''
-    ===== EXTRACT BLUEBILD IMAGES =====
+    ===== EXTRACT IMAGES FROM WSCLEAN=====
     '''
     bash_cmd = 'export PATH="/usr/bin:$PATH" && ' \
                'export PATH="$HOME/anaconda2/bin:$PATH" && ' \
