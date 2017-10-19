@@ -103,7 +103,7 @@ if __name__ == '__main__':
         RuntimeError('Unknown dataset: {}'.format(dataset))
 
     data_root_path = os.environ['DATA_ROOT_PATH']
-    hdf5_root_path = os.environ['BLUEBILD_ROOT_PATH']
+    hdf5_root_path = os.environ['PROCESSED_DATA_ROOT_PATH']
     basefile_name = parameter_set['basefile_name']
     ms_file_name = data_root_path + basefile_name + '.ms'
     num_channel = 1

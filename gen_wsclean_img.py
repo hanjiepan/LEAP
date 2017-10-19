@@ -79,7 +79,6 @@ if __name__ == '__main__':
             res_img_name = arg
 
     data_root_path = os.environ['DATA_ROOT_PATH']
-    blueBild_root_path = os.environ['BLUEBILD_ROOT_PATH']
     basefile_name = 'BOOTES24_SB180-189.2ch8s_SIM'
     ms_file_name = data_root_path + basefile_name + '.ms'
     # frequency channels in [freq_channel_min, freq_channel_max) are selected

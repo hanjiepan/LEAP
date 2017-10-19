@@ -144,23 +144,19 @@ def parseArgs():
 if __name__ == '__main__':
     args = parseArgs()
     data_root_path = os.environ['DATA_ROOT_PATH']
-    blueBild_root_path = os.environ['BLUEBILD_ROOT_PATH']
+    processed_data_root_path = os.environ['PROCESSED_DATA_ROOT_PATH']
     basefile_name = args['basefile_name']
-    if args['blueBild_imag_file'] is not None:
-        blueBild_imag_file = blueBild_root_path + args['blueBild_imag_file']
-    else:
-        blueBild_imag_file = None
     if args['catalog_file'] is not None:
-        catalog_file = blueBild_root_path + args['catalog_file']
+        catalog_file = processed_data_root_path + args['catalog_file']
     else:
         catalog_file = None
     if args['nvss_catalog_file'] is not None:
-        nvss_catalog_file = blueBild_root_path + args['nvss_catalog_file']
+        nvss_catalog_file = processed_data_root_path + args['nvss_catalog_file']
     else:
         nvss_catalog_file = None
 
     ms_file_name = data_root_path + basefile_name + '.ms'
-    ms_data_file = blueBild_root_path + basefile_name + '.hdf5'
+    ms_data_file = processed_data_root_path + basefile_name + '.hdf5'
 
     num_channel = args['num_channel']
     time_sampling_step = args['time_sampling_step']
@@ -305,7 +301,6 @@ if __name__ == '__main__':
         number_of_stations=number_of_stations,
         FoV=FoV,
         final_image_size=final_image_size,
-        blueBild_imag_file=blueBild_imag_file,
         nvss_catalog=nvss_catalog_file,
         catalog_file=catalog_file,
         CLEAN_data_file=CLEAN_data_file,
