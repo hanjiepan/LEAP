@@ -88,30 +88,44 @@ Fig. 10: Point source reconstruction in the presence of extended sources with LO
 Data used in the paper
 ----------------------
 
-The randomly generated point source parameters are saved under the folder `data/ast_src_resolve/`:
+* The randomly generated point source parameters are saved under the folder `data/ast_src_resolve/`:
 
-    # Simulated point source use in Fig. 4
-    src_param_20170503-150943.npz
+        # Simulated point source use in Fig. 4
+        src_param_20170503-150943.npz
 
-    # Simulation point source use in Fig. 6
-    src_param_20170626-231925.npz
+        # Simulation point source use in Fig. 6
+        src_param_20170626-231925.npz
     
-    # Simulation point source use in Fig. 7
-    src_param_20170331-155144.npz
+        # Simulation point source use in Fig. 7
+        src_param_20170331-155144.npz
 
-    # Simulation point source use in Fig. 8
-    src_param_20170701-163710.npz
+        # Simulation point source use in Fig. 8
+        src_param_20170701-163710.npz
 
-The extracted visibility measurements from the MS file of LOFAR observation are svaed under the folder `data/`:
+* The extracted visibility measurements from the MS file of LOFAR observation are svaed under the folder `data/`:
     
-    # Bootes field (single-band)
-    BOOTES24_SB180-189.2ch8s_SIM_72STI_146MHz_28Station_1Subband.npz
+        # Bootes field (single-band)
+        BOOTES24_SB180-189.2ch8s_SIM_72STI_146MHz_28Station_1Subband.npz
     
-    # Bootes field (multi-band)
-    BOOTES24_SB180-189.2ch8s_SIM_9STI_146MHz_28Station_8Subband.npz
+        # Bootes field (multi-band)
+        BOOTES24_SB180-189.2ch8s_SIM_9STI_146MHz_28Station_8Subband.npz
     
-    # Toothbrush cluster
-    RX42_SB100-109.2ch10s_63STI_132MHz_36Station_1Subband_FoV5.npz
+        # Toothbrush cluster
+        RX42_SB100-109.2ch10s_63STI_132MHz_36Station_1Subband_FoV5.npz
+    
+* The raw measurement set (MS) from LOFAR was used in experiments with real data as well as in simulations, where we fill in the MS file with simulated visibilities. The dataset can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.1042525) and decompressed afterwards:
+
+    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1042525.svg)](https://doi.org/10.5281/zenodo.1042525)
+
+        wget https://zenodo.org/record/1042525/files/BOOTES24_SB180-189.2ch8s_SIM.ms.tar.gz
+        wget https://zenodo.org/record/1042525/files/RX42_SB100-109.2ch10s.ms.tar.gz
+        tar -xzvf BOOTES24_SB180-189.2ch8s_SIM.ms.tar.gz
+        tar -xzvf RX42_SB100-109.2ch10s.ms.tar.gz
+        
+    After decompression, update the evironment variable in `setup.py`, e.g.,:
+    
+        os.environ['DATA_ROOT_PATH'] = 'path_to_the_ms_files'
+        os.environ['PROCESSED_DATA_ROOT_PATH'] = 'path_to_the_ms_files'
 
 Dependencies
 ------------
