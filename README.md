@@ -113,12 +113,12 @@ Data used in the paper
         # Toothbrush cluster
         RX42_SB100-109.2ch10s_63STI_132MHz_36Station_1Subband_FoV5.npz
     
-* The raw measurement set (MS) from LOFAR was used in experiments with real data as well as in simulations, where we fill in the MS file with simulated visibilities. The dataset can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.1042525) and decompressed afterwards:
+* The raw measurement set (MS) from LOFAR was used in experiments with real data as well as in simulations, where we fill in the MS file with simulated visibilities. The dataset can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.1044019) and decompressed afterwards:
 
-    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1042525.svg)](https://doi.org/10.5281/zenodo.1042525)
+    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1044019.svg)](https://doi.org/10.5281/zenodo.1044019)
 
-        wget https://zenodo.org/record/1042525/files/BOOTES24_SB180-189.2ch8s_SIM.ms.tar.gz
-        wget https://zenodo.org/record/1042525/files/RX42_SB100-109.2ch10s.ms.tar.gz
+        wget https://zenodo.org/record/1044019/files/BOOTES24_SB180-189.2ch8s_SIM.ms.tar.gz
+        wget https://zenodo.org/record/1044019/files/RX42_SB100-109.2ch10s.ms.tar.gz
         tar -xzvf BOOTES24_SB180-189.2ch8s_SIM.ms.tar.gz
         tar -xzvf RX42_SB100-109.2ch10s.ms.tar.gz
         
@@ -126,6 +126,12 @@ Data used in the paper
     
         os.environ['DATA_ROOT_PATH'] = 'path_to_the_ms_files'
         os.environ['PROCESSED_DATA_ROOT_PATH'] = 'path_to_the_ms_files'
+        
+* We have used three catalogs in the experiments, namely the [Boötes field catalog](https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/stw1056), [TGSS ADR1 catalog](http://tgssadr.strw.leidenuniv.nl/catalogs/TGSSADR1_7sigma_catalog.fits), and the [NVSS catalog](ftp://nvss.cv.nrao.edu/pub/nvss/CATALOG/). We have converted the original FITS tables of the catalogs to Numpy arrays. They can be downloaded from the same [Zenodo](https://doi.org/10.5281/zenodo.1044019) webpage:
+
+        wget https://zenodo.org/record/1044019/files/skycatalog.npz
+        wget https://zenodo.org/record/1044019/files/TGSSADR1_7sigma_catalog.npz
+        wget https://zenodo.org/record/1044019/files/NVSS_CATALOG.npz
 
 Dependencies
 ------------
