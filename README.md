@@ -127,7 +127,7 @@ Data used in the paper
         os.environ['DATA_ROOT_PATH'] = 'path_to_the_ms_files'
         os.environ['PROCESSED_DATA_ROOT_PATH'] = 'path_to_the_ms_files'
         
-* We have used three catalogs in the experiments, namely the [Boötes field catalog](https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/stw1056), [TGSS ADR1 catalog](http://tgssadr.strw.leidenuniv.nl/catalogs/TGSSADR1_7sigma_catalog.fits), and the [NVSS catalog](ftp://nvss.cv.nrao.edu/pub/nvss/CATALOG/). We have converted the original FITS tables of the catalogs to Numpy arrays. They can be downloaded from the same [Zenodo](https://doi.org/10.5281/zenodo.1044019) webpage:
+* We have used three catalogs in the experiments, namely the [Boötes field catalog](https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/stw1056), [TGSS ADR1 catalog](http://tgssadr.strw.leidenuniv.nl/catalogs/TGSSADR1_7sigma_catalog.fits), and the [NVSS catalog](http://www.cv.nrao.edu/nvss/NVSSlist.shtml). We have converted the original FITS tables of the catalogs to Numpy arrays. They can be downloaded from the same [Zenodo](https://doi.org/10.5281/zenodo.1044019) webpage:
 
         wget https://zenodo.org/record/1044019/files/skycatalog.npz
         wget https://zenodo.org/record/1044019/files/TGSSADR1_7sigma_catalog.npz
