@@ -107,9 +107,9 @@ def planar_distance(x_ref, y_ref, x_recon, y_recon):
         d = np.min(diffmat)
         index = np.argmin(diffmat)
         if N1 == 1:
-            index = np.array([1, index])
+            index = np.array([0, index])
         else:
-            index = np.array([index, 1])
+            index = np.array([index, 0])
     return d, index
 
 
